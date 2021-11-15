@@ -89,9 +89,11 @@ class AlbumTestCaseFake(unittest.TestCase):
                 self.data_factory.albumMedio()
             )
         )
+
         resultado = self.logica.agregar_album (
             titulo = self.data[ -1 ][ 0 ] ,
             anio = self.data[ -1 ][ 1 ] ,
             descripcion = self.data[ -1 ][ 2 ] ,
             medio = self.data[ -1 ][ 3 ] )
+
         self.assertEqual ( resultado , True )
