@@ -30,3 +30,34 @@ class AlbumFechaProvider(BaseProvider):
         new_date = datetime(2019, 2, 28, 00, 00, 00, 00000)
         fecha = [new_date, new_date + timedelta(days=-1), new_date + timedelta(days=-2)]
         return random.choice(fecha)
+
+class CancionTituloProvider(BaseProvider):
+    def cancionTitulo(self):
+        cancionTitulo = ['Corazon', 'Desesperado', 'La niña de mis ojos', 'Melodía', 'Razones']
+        return random.choice(cancionTitulo)
+
+class CancionMinutosProvider(BaseProvider):
+    def cancionMinutos(self):
+        minutos = [1, 2, 3, 4]
+        return random.choice(minutos)
+
+class CancionSegundosProvider(BaseProvider):
+    def cancionSegundos(self):
+        segundos = [15, 26, 35, 46]
+        return random.choice(segundos)
+
+class CancionCompositorProvider(BaseProvider):
+    def cancionCompositor(self):
+        compositor = ['Enanitos Verdes', 'Grupo 5', 'RBD', 'Yiruma']
+        return random.choice(compositor)
+
+class InterpreteNombreProvider(BaseProvider):
+    def interpreteNombre(self):
+        nombre = ['Marco Hernández', 'George Lucas', 'Esteban Díaz', 'Rosa Olivares']
+        return random.choice(nombre)
+
+class InterpreteCuriosidadesProvider(BaseProvider):
+    def interpreteCuriosidades(self):
+        curiosidades = ['Hermano de', 'Médico', 'Astronauta', 'Emisión de']
+        return random.choice(curiosidades)
+

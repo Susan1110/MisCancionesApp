@@ -1,13 +1,9 @@
-import datetime
 import unittest
-import random
 
 from faker import Faker
 
 from src.logica.coleccion import Coleccion
-from src.modelo.album import Album,Medio
-from src.modelo.cancion import Cancion,AlbumCancion
-from src.modelo.interprete import Interprete
+from src.modelo.album import Album
 from src.modelo.declarative_base import Session
 from fake_providers import AlbumTituloProvider,AlbumAnioProvider,AlbumDescripcionProvider,AlbumMedioProvider
 
@@ -31,7 +27,7 @@ class AlbumTestCaseFake(unittest.TestCase):
                     self.data_factory.unique.albumTitulo ( ),
                     self.data_factory.albumAnio ( ),
                     self.data_factory.albumDescripcion ( ),
-                    self.data_factory.albumMedio ()
+                    self.data_factory.albumMedio (),
                 )
             )
             self.albumes.append(

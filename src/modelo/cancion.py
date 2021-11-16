@@ -12,7 +12,8 @@ class Cancion(Base):
     minutos = Column(Integer)
     segundos = Column(Integer)
     compositor = Column(String)
-    albumes = relationship('Album', secondary='album_cancion')
+    #albumes = relationship('Album', secondary='album_cancion')
+    albumes = relationship('Album', secondary='album_cancion', back_populates="canciones")
     interpretes = relationship('Interprete', cascade='all, delete, delete-orphan')
 
 
